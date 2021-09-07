@@ -50,7 +50,7 @@ mcols(dds_AS) = DataFrame(
 mod = model.matrix(~female + age + race + hispanic + activity_moderate_tertile_v1, metaTmp)
 
 # Checking and removing columns that are unnecessary (hispanic = 2 and biologicIS = 2) and lead to redundant model matrix 
-caret::findLinearCombos(mod)  # Harry does not know what this is mean
+caret::findLinearCombos(mod)
 
 
 # Each group should have at least 30% of samples expressing a gene
